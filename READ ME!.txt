@@ -11,7 +11,7 @@ OPENAI_API_KEY = os.getenv('')
 openai.api_key = ''
 
 
-Openai API Key "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"
+Openai API Key "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"
 Positiontrack API Key "0f2629ef2363a68b69191ac915689738"
 Weather API Key "a1237229611042be99914228230511"
 
