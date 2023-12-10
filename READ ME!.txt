@@ -1,0 +1,23 @@
+How to use the app
+
+First enter the api keys listed below in this section on the app.py file 
+
+# API keys for various services
+WEATHERAPI_API_KEY = ''
+POSITIONSTACK_API_KEY = ''
+OPENAI_API_KEY = os.getenv('')
+
+# Set the OpenAI API key
+openai.api_key = ''
+
+
+Openai API Key "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"
+Positiontrack API Key "0f2629ef2363a68b69191ac915689738"
+Weather API Key "a1237229611042be99914228230511"
+
+
+Use of app is simple just enter location in search bar to get weather and forecast and map location
+For use of bot to make a Weather Request MAKE SURE YOU write "weather in (location)" otherwise it will not retrive the weather
+For all other queries simply ask the bot and it will assist with your queries
+
+If you have Zip file of assignment Ignore API Key step
