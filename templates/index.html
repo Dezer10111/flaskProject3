@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weather Finder</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Link to Leaflet CSS for the map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Leaflet JavaScript for interactive maps -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <!-- Header section containing the main heading -->
+  <header>
+    <h1>Weather Finder</h1>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Form for entering location -->
+    <form id="weatherForm">
+      <label for="location">Enter a location:</label>
+      <input type="text" id="location" name="location" placeholder="Type a location">
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <!-- Section to display the current weather -->
+    <section id="weatherDisplay"></section>
+
+    <!-- Section for the weather forecast -->
+    <section id="forecastDisplay"></section>
+
+    <!-- Div for the Leaflet map -->
+    <div id="map"></div>
+
+    <!-- Chatbot container -->
+    <div id="chatbotContainer">
+      <button id="chatbotButton">Chat</button>
+      <!-- Hidden chat window that appears on clicking 'Chat' button -->
+      <div id="chatbotChatWindow" style="display:none;">
+        <!-- Area for chat messages -->
+        <div id="chatbotMessages"></div>
+        <!-- Input field for typing messages -->
+        <input type="text" id="chatbotInput" placeholder="Ask something...">
+        <!-- Button to send the message -->
+        <button id="sendChatbotMessage">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <p>Created by [Shayan Dezfouli]</p>
+  </footer>
+
+  <!-- Scripts for handling weather application and chatbot functionalities -->
+  <script src="{{ url_for('static', filename='weatherApp.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='chatbot.js') }}" defer></script>
+</body>
+</html>
+

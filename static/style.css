@@ -1,0 +1,204 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select, button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/*Weather Display*/
+#weatherDisplay {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.weather-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.weather-item:last-child {
+  border-bottom: none;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.weather-temp {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.weather-condition {
+  flex-grow: 1;
+  text-align: center;
+  padding-left: 10px;
+}
+
+/* Forecast Styles */
+#forecastDisplay {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.forecast-icon {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.forecast-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#map {
+  height: 725px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Chatbot Styles */
+#chatbotContainer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#chatbotButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#chatbotChatWindow {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    padding: 15px;
+    display: none;
+    width: 450px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#chatbotMessages {
+    word-wrap: break-word;
+}
+
+#chatbotInput, #sendChatbotMessage {
+    width: 94%;
+}
+
+#chatbotInput {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#sendChatbotMessage {
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.message-user,
+.message-bot {
+    font-weight: bold;
+}
+
+.message-text {
+    margin-left: 10px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
